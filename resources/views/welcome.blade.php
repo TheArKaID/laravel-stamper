@@ -100,6 +100,9 @@
                         var scale = 1.5;
                         var viewport = page.getViewport({scale: scale});
                         var canvas = document.getElementById('pdf-canvas');
+                        // Remove class border-2
+                        canvas.classList.remove('border-2');
+
                         canvas.height = viewport.height;
                         canvas.width = viewport.width;
 
