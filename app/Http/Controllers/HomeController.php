@@ -46,7 +46,8 @@ class HomeController extends Controller
 
             // Since I only want to put the QR code on the last page
             if ($i == $pageCount) {
-                PDF::Image($qrPath, $realXPosition, $realYPosition, 20, 20, 'PNG');
+                PDF::SetAutoPageBreak(false);
+                PDF::Image($qrPath, $realXPosition, $realYPosition, 20.46, 20.46, 'PNG');
             }
         }
 
